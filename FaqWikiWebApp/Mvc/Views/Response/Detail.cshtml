@@ -1,0 +1,28 @@
+﻿@model FaqWiki.Sitefinity.Frontend.Mvc.Models.Response.ResponseViewModel
+
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.DynamicContent.WidgetTemplates.Fields.Helpers;
+@using Telerik.Sitefinity;
+@using Telerik.Sitefinity.Data.ContentLinks;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Mvc.Models;
+@using Telerik.Sitefinity.Web.DataResolving;
+@using Telerik.Sitefinity.Model.ContentLinks;
+@using Telerik.Sitefinity.Modules.Pages;
+
+<a href="ViewBag.ListPageUrl">Back to list</a>
+<div class="response_itm">
+    <h1>@Model.Title</h1>
+    <p><strong>Typical requirement:</strong> @Model.Requirement</p>
+    <div class="response_itm-content">
+       @Html.Raw(Model.Response)
+    </div>
+    <dl>
+        <dt>Current status:</dt>
+        <dd>@Model.CurrentStatus</dd>
+        <dt>Keywords:</dt>
+        <dd>@Model.Keywords</dd>
+        <dt>Last modified:</dt>
+        <dd>@Model.LastModified by @Model.LastModifiedBy</dd>
+    </dl>
+</div>

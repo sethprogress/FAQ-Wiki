@@ -1,0 +1,88 @@
+[
+  {
+    "Id": "4d4c7266-2771-4e67-8abf-2499f6fcef4a",
+    "Name": "product-editions",
+    "Type": "Telerik.Sitefinity.Taxonomies.Model.HierarchicalTaxonomy",
+    "LastModified": "2017-06-22T09:27:10.387Z",
+    "Title": [
+      {
+        "Key": "",
+        "Value": "Product Editions"
+      }
+    ],
+    "Description": [
+      {
+        "Key": "",
+        "Value": ""
+      }
+    ],
+    "TaxonName": [
+      {
+        "Key": "",
+        "Value": "Product Edition"
+      }
+    ]
+  },
+  {
+    "Id": "93f534ed-ee39-46f0-9268-5c4e7082dacb",
+    "Name": "products",
+    "Type": "Telerik.Sitefinity.Taxonomies.Model.FlatTaxonomy",
+    "LastModified": "2017-06-22T09:26:20.657Z",
+    "Title": [
+      {
+        "Key": "",
+        "Value": "Products"
+      }
+    ],
+    "Description": [
+      {
+        "Key": "",
+        "Value": ""
+      }
+    ],
+    "TaxonName": [
+      {
+        "Key": "",
+        "Value": "Product"
+      }
+    ]
+  },
+  {
+    "Id": "e5cd6d69-1543-427b-ad62-688a99f5e7d4",
+    "Name": "Categories",
+    "Type": "Telerik.Sitefinity.Taxonomies.Model.HierarchicalTaxonomy",
+    "LastModified": "2017-06-22T09:19:02.9Z",
+    "Title": [
+      {
+        "Key": "",
+        "Value": "Categories"
+      }
+    ],
+    "Description": [],
+    "TaxonName": [
+      {
+        "Key": "",
+        "Value": "Category"
+      }
+    ]
+  },
+  {
+    "Id": "cb0f3a19-a211-48a7-88ec-77495c0f5374",
+    "Name": "Tags",
+    "Type": "Telerik.Sitefinity.Taxonomies.Model.FlatTaxonomy",
+    "LastModified": "2017-06-22T09:19:02.9Z",
+    "Title": [
+      {
+        "Key": "",
+        "Value": "Tags"
+      }
+    ],
+    "Description": [],
+    "TaxonName": [
+      {
+        "Key": "",
+        "Value": "Tag"
+      }
+    ]
+  }
+]

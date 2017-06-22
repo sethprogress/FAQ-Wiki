@@ -1,0 +1,65 @@
+[
+  {
+    "Id": "36567d2e-147c-45c9-a533-8c5d7a07c7eb",
+    "Namespace": "Telerik.Sitefinity.Security.Model",
+    "ClassName": "SitefinityProfile",
+    "Fields": [
+      {
+        "Id": "115bc42b-e30e-4f49-b7e9-21fda742dfb0",
+        "FieldName": "PostsCount",
+        "ClrType": "System.Int32",
+        "ColumnName": "posts_count",
+        "Presentation": [],
+        "MetaAttributes": [
+          {
+            "Id": "60af1ff1-a893-4d51-bda5-a074dfe24780",
+            "Name": "UserFriendlyDataType",
+            "Value": "Number"
+          },
+          {
+            "Id": "3f5e8aea-cc94-41a3-997e-75ffb8ec3fca",
+            "Name": "IsCommonProperty",
+            "Value": "true"
+          }
+        ],
+        "DefaultValue": "0",
+        "Hidden": true,
+        "MinValue": "0",
+        "ApplicationName": "FaqWikiWebApp/",
+        "IsDynamic": true
+      },
+      {
+        "Id": "30e0fbe3-0b0a-425d-b379-b2e8f1d1d128",
+        "FieldName": "IsProfilePublic",
+        "ClrType": "System.Boolean",
+        "ColumnName": "is_profile_public",
+        "Presentation": [],
+        "MetaAttributes": [
+          {
+            "Id": "d6a96642-3bb4-4b99-bf0e-8df96596bee4",
+            "Name": "UserFriendlyDataType",
+            "Value": "YesNo"
+          },
+          {
+            "Id": "da48496b-3aee-40a6-8861-14ffc04e52d7",
+            "Name": "IsCommonProperty",
+            "Value": "true"
+          }
+        ],
+        "DefaultValue": "False",
+        "ApplicationName": "FaqWikiWebApp/",
+        "IsDynamic": true
+      }
+    ],
+    "ApplicationName": "FaqWikiWebApp/",
+    "Presentation": [],
+    "MetaAttributes": [
+      {
+        "Name": "UserFriendlyName",
+        "Value": "Basic profile"
+      }
+    ],
+    "SectionNames": [],
+    "AssemblyName": "Telerik.Sitefinity.Model"
+  }
+]
