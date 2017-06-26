@@ -19,6 +19,7 @@ namespace FaqWiki.Sitefinity.Frontend.Mvc.Models.Response
         public string LastModifiedBy { get; set; }
         public string CurrentStatus { get; set; }
 
+        public Guid Id { get; set; }
         public string Url { get; set; }
     }
 }

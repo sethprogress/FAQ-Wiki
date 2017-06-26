@@ -10,9 +10,9 @@ namespace FaqWiki.Sitefinity.Frontend.Mvc.Models.Response
     public class ResponseListViewModel
     {
         public ResponseListViewModel()
-            {
-                Responses = new List<ResponseItemModel>();
-            }
+        {
+            Responses = new List<ResponseItemModel>();
+        }
 
         public int CurrentPage { get; set; }
 

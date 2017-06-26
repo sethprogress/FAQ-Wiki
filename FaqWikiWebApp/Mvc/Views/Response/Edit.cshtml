@@ -9,10 +9,34 @@
 @using Telerik.Sitefinity.Web.DataResolving;
 @using Telerik.Sitefinity.Model.ContentLinks;
 @using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Frontend.Forms.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Forms.Mvc.Models;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
 
-<h1>Edit mode</h1>
-@Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+@{
+    var detailUrl = String.Format("{0}/{1}", ViewBag.ListPageUrl, Model.Response.Url);
+}
+<h1>@Model.Response.Title</h1>
+@using (Html.BeginFormSitefinity())
+            {
+    <div class="form-group">
+        @Html.LabelFor(model => model.Response.Title)
+        @Html.EditorFor(model => model.Response.Title, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.Response.Requirement)
+        @Html.EditorFor(model => model.Response.Requirement, new { htmlAttributes = new { @class = "form-control" } })
+    </div>
 
+    <div class="form-group">
+        @Html.LabelFor(model => model.Response.Response)
+        @Html.TextAreaFor(model => model.Response.Response, new { @class = "form-control", @rows = 3 })
+    </div>
+    <input type="submit" value="Send for approval" class="btn btn-primary" />
+    <a href="@detailUrl" class="btn">Cancel</a>
+}
 @*@ViewBag.ListPageUrl
     <h1>@Model.Title</h1>
     <p><strong>Typical requirement:</strong> @Model.Requirement</p>

@@ -10,19 +10,26 @@
 @using Telerik.Sitefinity.Model.ContentLinks;
 @using Telerik.Sitefinity.Modules.Pages;
 
-<a href="ViewBag.ListPageUrl">Back to list</a>
-<div class="response_itm">
-    <h1>@Model.Title</h1>
-    <p><strong>Typical requirement:</strong> @Model.Requirement</p>
+@{ 
+    var editUrl = String.Format("{0}/edit/{1}", ViewBag.ListPageUrl, Model.Response.Url);
+}
+
+<a href="@ViewBag.ListPageUrl" class="btn">Back to list</a>
+<article class="response_itm">
+    <header>
+        <a href="@editUrl" class="btn">Update</a>
+        <h1>@Model.Response.Title</h1>
+        <p><strong>Typical requirement:</strong> @Model.Response.Requirement</p>
+    </header>
     <div class="response_itm-content">
-       @Html.Raw(Model.Response)
+       @Html.Raw(Model.Response.Response)
     </div>
     <dl>
         <dt>Current status:</dt>
-        <dd>@Model.CurrentStatus</dd>
+        <dd>@Model.Response.CurrentStatus</dd>
         <dt>Keywords:</dt>
-        <dd>@Model.Keywords</dd>
+        <dd>@Model.Response.Keywords</dd>
         <dt>Last modified:</dt>
-        <dd>@Model.LastModified by @Model.LastModifiedBy</dd>
+        <dd>@Model.Response.LastModified by @Model.Response.LastModifiedBy</dd>
     </dl>
-</div>
+</article>

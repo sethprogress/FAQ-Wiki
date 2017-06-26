@@ -99,6 +99,7 @@ namespace FaqWiki.Sitefinity.Frontend.Mvc.Controllers
 
         #region Actions
 
+        [RelativeRoute("{page:int:min(1)?}")]
         public ActionResult Index(int? page)
         {
             if (this.IsEmpty)
@@ -112,23 +113,31 @@ namespace FaqWiki.Sitefinity.Frontend.Mvc.Controllers
             return View(this.TemplateName, viewModel);
         }
 
-        public ActionResult Details(DynamicContent response)
+        [RelativeRoute("{itemUrl}")]
+        public ActionResult Detail(string itemUrl)
         {
-            var viewModel = this.Model.GetViewModel(response);
+            var viewModel = this.Model.GetViewModel(itemUrl);
             var node = SiteMapBase.GetActualCurrentNode();
             ViewBag.ListPageUrl = node.Url.TrimStart(new char[] { '~' });
 
             return View("Detail",viewModel);
         }
-        
 
-        public ActionResult Edit(DynamicContent response)
+        [RelativeRoute("edit/{itemUrl}")]
+        public ActionResult Edit(string itemUrl)
         {
-            var viewModel = this.Model.GetViewModel(response);
+            var viewModel = this.Model.GetViewModel(itemUrl);
             var node = SiteMapBase.GetActualCurrentNode();
             ViewBag.ListPageUrl = node.Url.TrimStart(new char[] { '~' });
 
             return View("Edit", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Submit(ResponseViewModel response)
+        {
+
+            return RedirectToAction("Index");
         }
 
         #endregion
